@@ -1,5 +1,6 @@
 //Testing stuff here
 let pop = document.getElementById("popup");
+pop.style.left = ((window.innerWidth) / 2) + "px";
 
 let btn = document.getElementById("popbutton");
 btn.addEventListener("click", function() {

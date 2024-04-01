@@ -9,10 +9,13 @@ body {
 #open {
 	background-color: blue;
 	clear: both;
+	height: 150px;
+	position: relative;
 }
 #popup {
 	background-color: purple;
 	clear: both;
+	position: absolute;
 }
 #popbutton {
 	float: right;
