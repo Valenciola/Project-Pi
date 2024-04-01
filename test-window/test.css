@@ -1,0 +1,19 @@
+body {
+	background-color: aliceblue;
+	font-family: Calibri, sans-serif;
+	color: white;
+	text-align: center;
+}
+
+
+#open {
+	background-color: blue;
+	clear: both;
+}
+#popup {
+	background-color: purple;
+	clear: both;
+}
+#popbutton {
+	float: right;
+}
