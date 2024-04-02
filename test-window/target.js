@@ -23,3 +23,15 @@ window.addEventListener("keydown", function(e) {
 		pop.style.display = "none";
 	});
 });
+
+let tog = document.getElementById("linkup");
+let area = 1;
+tog.addEventListener("click", function() {
+	console.log("Captured!");
+	if (tog.getAttribute("href") == "#open") {
+		tog.setAttribute("href", "#mid");
+	}
+	else {
+		tog.setAttribute("href", "#open");
+	}
+});
