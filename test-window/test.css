@@ -15,7 +15,7 @@ body {
 #popup {
 	background-color: purple;
 	clear: both;
-	position: absolute;
+	position: relative;
 }
 #popbutton {
 	float: right;
