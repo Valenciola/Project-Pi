@@ -20,7 +20,6 @@ html {
 #open {
 	background-color: blue;
 	clear: both;
-	height: 150px;
 	position: relative;
 	height: 100vh;
 }
@@ -29,6 +28,7 @@ html {
 	clear: both;
 	position: fixed;
 	left: 50%;
+	top: 50%;
 	margin-left: -200px;
 	width: 450px;
 	z-index: 9;
