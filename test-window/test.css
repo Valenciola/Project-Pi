@@ -1,11 +1,19 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+}
 body {
 	background-color: aliceblue;
 	font-family: Calibri, sans-serif;
 	color: white;
 	text-align: center;
+	overflow-y: hidden;
 }
 div {
 	padding: 5px;
+}
+html {
+	scroll-behavior: smooth;
 }
 
 
@@ -14,6 +22,7 @@ div {
 	clear: both;
 	height: 150px;
 	position: relative;
+	height: 100vh;
 }
 #popup {
 	background-color: purple;
@@ -22,7 +31,15 @@ div {
 	left: 50%;
 	margin-left: -200px;
 	width: 450px;
+	z-index: 9;
 }
 #popbutton {
 	float: right;
+}
+#mid {
+	background-color: pink;
+	clear: both;
+	height: 150px;
+	position: relative;
+	height: 100vh;
 }
