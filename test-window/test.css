@@ -4,6 +4,9 @@ body {
 	color: white;
 	text-align: center;
 }
+div {
+	padding: 5px;
+}
 
 
 #open {
@@ -15,7 +18,10 @@ body {
 #popup {
 	background-color: purple;
 	clear: both;
-	position: relative;
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	width: 450px;
 }
 #popbutton {
 	float: right;
