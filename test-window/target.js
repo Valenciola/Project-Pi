@@ -38,16 +38,8 @@ let togupb = document.getElementById("linkupbtn");
 let togdownb = document.getElementById("linkdownbtn");
 let area = 0;
 let rooms = ["#upper", "#open", "#mid", "#lower"];
-area = rooms.indexOf(loca);
 
 let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
-	if (room < 0) {
-		area = 0;
-	}
-	else if (room > rooms.length - 1) {
-		area = rooms.length - 1;
-	}
-
 	if (room == 0) {
 		upbtn.setAttribute("disabled", "true");
 		downbtn.removeAttribute("disabled");
@@ -66,17 +58,26 @@ let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
 	}
 }
 
+area = rooms.indexOf(loca);
 regulate(area, rooms, togupb, togdownb, togup, togdown);
 
 togup.addEventListener("click", function() {
 	console.log("Going up!");
 	area--;
+	if (area < 0) {
+		area = 0;
+	}
 	//regulate(area, rooms, togupb, togdownb, togup, togdown);
 	setTimeout(regulate, 1, area, rooms, togupb, togdownb, togup, togdown);
+	console.log(area);
 });
 togdown.addEventListener("click", function() {
 	console.log("Going down!");
 	area++;
+	if (area > rooms.length - 1) {
+		area = rooms.length - 1;
+	}
 	//regulate(area, rooms, togupb, togdownb, togup, togdown);
 	setTimeout(regulate, 1, area, rooms, togupb, togdownb, togup, togdown);
+	console.log(area);
 });
