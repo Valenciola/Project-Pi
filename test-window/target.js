@@ -1,3 +1,5 @@
+console.log("Test window connected!");
+
 //Testing stuff here
 let pop = document.getElementById("popup");
 //pop.style.left = ((window.innerWidth) / 2) + "px";
@@ -24,14 +26,51 @@ window.addEventListener("keydown", function(e) {
 	});
 });
 
-let tog = document.getElementById("linkup");
-let area = 1;
-tog.addEventListener("click", function() {
-	console.log("Captured!");
-	if (tog.getAttribute("href") == "#open") {
-		tog.setAttribute("href", "#mid");
+//Buttons to change rooms
+let togup = document.getElementById("linkup");
+let togdown = document.getElementById("linkdown");
+let togupb = document.getElementById("linkupbtn");
+let togdownb = document.getElementById("linkdownbtn");
+let area = 0;
+let rooms = ["#upper", "#open", "#mid", "#lower"];
+
+let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
+	if (room < 0) {
+		area = 0;
+	}
+	else if (room > rooms.length - 1) {
+		area = rooms.length - 1;
+	}
+
+	if (room == 0) {
+		upbtn.setAttribute("disabled", "true");
+		downbtn.removeAttribute("disabled");
+		downlink.setAttribute("href", rooms[room + 1]);
+	}
+	else if (room == rooms.length - 1) {
+		downbtn.setAttribute("disabled", "true");
+		upbtn.removeAttribute("disabled");
+		uplink.setAttribute("href", rooms[room - 1]);
 	}
 	else {
-		tog.setAttribute("href", "#open");
+		upbtn.removeAttribute("disabled");
+		downbtn.removeAttribute("disabled");
+		downlink.setAttribute("href", rooms[room + 1]);
+		uplink.setAttribute("href", rooms[room - 1]);
 	}
+}
+
+regulate(area, rooms, togupb, togdownb, togup, togdown);
+
+togup.addEventListener("click", function() {
+	console.log("Going up!");
+	area--;
+	//regulate(area, rooms, togupb, togdownb, togup, togdown);
+	setTimeout(regulate, 1, area, rooms, togupb, togdownb, togup, togdown);
+});
+togdown.addEventListener("click", function() {
+	console.log("Going down!");
+	area++;
+	//regulate(area, rooms, togupb, togdownb, togup, togdown);
+	setTimeout(regulate, 1, area, rooms, togupb, togdownb, togup, togdown);
 });
