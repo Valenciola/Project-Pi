@@ -1,3 +1,4 @@
+/* General Stuff */
 html, body {
 	margin: 0px;
 	height: 100%;
@@ -16,13 +17,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-
-#open {
-	background-color: lavender;
-	clear: both;
-	position: relative;
-	height: 100vh;
-}
+/* Popup Styling */
 #popup {
 	background-color: purple;
 	clear: both;
@@ -35,6 +30,14 @@ html {
 }
 #popbutton {
 	float: right;
+}
+
+/* Big Divs */
+#open {
+	background-color: lavender;
+	clear: both;
+	position: relative;
+	height: 100vh;
 }
 #mid {
 	background-color: pink;
