@@ -1,6 +1,11 @@
+//Random randomness *
 console.log("Test window connected!");
 
-//Testing stuff here
+//Grab the website section off the bat
+let loca = window.location.href;
+loca = loca.substring(loca.indexOf("#"), loca.length);
+
+//Popup Code *
 let pop = document.getElementById("popup");
 //pop.style.left = ((window.innerWidth) / 2) + "px";
 
@@ -26,13 +31,14 @@ window.addEventListener("keydown", function(e) {
 	});
 });
 
-//Buttons to change rooms
+//Buttons to change rooms *
 let togup = document.getElementById("linkup");
 let togdown = document.getElementById("linkdown");
 let togupb = document.getElementById("linkupbtn");
 let togdownb = document.getElementById("linkdownbtn");
 let area = 0;
 let rooms = ["#upper", "#open", "#mid", "#lower"];
+area = rooms.indexOf(loca);
 
 let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
 	if (room < 0) {
