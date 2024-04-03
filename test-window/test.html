@@ -6,26 +6,35 @@
 		<script src="target.js" defer></script>
 	</head>
 	<body>
+		<!-- These are the buttons that control where the room scrolls to. -->
 		<a id="linkup" href=""><button class="roomcontrol" id="linkupbtn">&#8593</button></a>
 		<a id="linkdown" href=""><button class="roomcontrol" id="linkdownbtn">&#8595</button></a>
+
+		<!-- This is the bare-bones popup I keep referring to. Since I know it works, I'm not paying too much attention to it but it needs improvements -->
+		<div id="popup">
+			<button id="popbutton">X</button>
+			<p>Hello</p>
+			<p>Some extra text to fill area</p>
+			<p>Is there an expansion if I type more than I already have?</p>
+		</div>
+
+		<!-- Different Levels of Divs -->
 		<div id="upper">
-			<p>Upper Layer</p>
+			<h3>Upper Layer</h3>
+			<p>The roof in the game</p>
 		</div>
 		<div id="open">
-			<p>Open Layer</p>
-			<div id="popup">
-				<button id="popbutton">X</button>
-				<p>Hello</p>
-				<p>Some extra text to fill area</p>
-				<p>Is there an expansion if I type more than I already have?</p>
-			</div>
+			<h3>Open Layer</h3>
 			<p>Extra extra extra extra</p>
+			<p>The shop in the game</p>
 		</div>
 		<div id="mid">
-			<p>Mid Layer</p>
+			<h3>Mid Layer</h3>
+			<p>I think this is the office</p>
 		</div>
 		<div id="lower">
-			<p>Lower Layer</p>
+			<h3>Lower Layer</h3>
+			<p>This is like the kitchen or something</p>
 		</div>
 	</body>
 </html>
