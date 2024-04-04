@@ -3,7 +3,7 @@ console.log("Test window connected!");
 
 //Grab the website section off the bat
 let loca = window.location.href;
-loca = loca.substring(loca.indexOf("#"), loca.length);
+loca = (loca.substring(loca.indexOf("#"), loca.length));
 
 //Popup Code *
 let pop = document.getElementById("popup");
@@ -59,6 +59,9 @@ let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
 }
 
 area = rooms.indexOf(loca);
+if (area < 0) {
+	area = 0;
+}
 regulate(area, rooms, togupb, togdownb, togup, togdown);
 
 togup.addEventListener("click", function() {
