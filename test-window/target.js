@@ -9,7 +9,6 @@ let loca = window.location.href;
 loca = (loca.substring(loca.indexOf("#"), loca.length));
 
 let pop = document.getElementById("popup");
-//pop.style.left = ((window.innerWidth) / 2) + "px";
 
 //Variables for the switching buttons
 let togup = document.getElementById("linkup");
