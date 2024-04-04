@@ -51,17 +51,20 @@ let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
 	}
 	else if (room == 0) {
 		upbtn.setAttribute("disabled", "true");
+
 		downbtn.removeAttribute("disabled");
 		downlink.setAttribute("href", rooms[room + 1]);
 	}
 	else if (room == rooms.length - 1) {
 		downbtn.setAttribute("disabled", "true");
+
 		upbtn.removeAttribute("disabled");
 		uplink.setAttribute("href", rooms[room - 1]);
 	}
 	else {
 		upbtn.removeAttribute("disabled");
 		downbtn.removeAttribute("disabled");
+		
 		downlink.setAttribute("href", rooms[room + 1]);
 		uplink.setAttribute("href", rooms[room - 1]);
 	}
