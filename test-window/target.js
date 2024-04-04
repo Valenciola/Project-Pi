@@ -1,31 +1,17 @@
 //Random randomness *
 console.log("Test window connected!");
 
+//Misc but useful
+let switchable = true;
+
 //Grab the website section off the bat
 let loca = window.location.href;
 loca = (loca.substring(loca.indexOf("#"), loca.length));
 
-//Popup Code *
 let pop = document.getElementById("popup");
 //pop.style.left = ((window.innerWidth) / 2) + "px";
 
-//Bare bones for a popup
-let btn = document.getElementById("popbutton");
-btn.addEventListener("click", function() {
-	console.log("Click!");
-	popbutton.setAttribute("disabled", "true");
-	pop.style.display = "none";
-});
-
-window.addEventListener("keydown", function(e) {
-	if (e.key == 'a') {
-		console.log("A");
-		popbutton.removeAttribute("disabled");
-		pop.style.display = "initial";
-	}
-});
-
-//Buttons to change rooms *
+//Variables for the switching buttons
 let togup = document.getElementById("linkup");
 let togdown = document.getElementById("linkdown");
 let togupb = document.getElementById("linkupbtn");
@@ -33,8 +19,37 @@ let togdownb = document.getElementById("linkdownbtn");
 let area = 0;
 let rooms = ["#upper", "#open", "#mid", "#lower"];
 
+//Bare bones for a popup
+let btn = document.getElementById("popbutton");
+btn.addEventListener("click", function() {
+	console.log("Click!");
+	popbutton.setAttribute("disabled", "true");
+	pop.style.display = "none";
+	switchable = true;
+	regulate(area, rooms, togupb, togdownb, togup, togdown);
+});
+
+window.addEventListener("keydown", function(e) {
+	if (e.key == 'a') {
+		console.log("A");
+		popbutton.removeAttribute("disabled");
+		pop.style.display = "initial";
+
+		togupb.setAttribute("disabled", "true");
+		togdownb.setAttribute("disabled", "true");
+		togup.setAttribute("href", rooms[area]);
+		togdown.setAttribute("href", rooms[area]);
+		switchable = false;
+	}
+});
+
+//Buttons to change rooms *
+
 let regulate = function (room, rooms, upbtn, downbtn, uplink, downlink) {
-	if (room == 0) {
+	if (!switchable) {
+		//Do nothing, I guess
+	}
+	else if (room == 0) {
 		upbtn.setAttribute("disabled", "true");
 		downbtn.removeAttribute("disabled");
 		downlink.setAttribute("href", rooms[room + 1]);
@@ -60,7 +75,9 @@ regulate(area, rooms, togupb, togdownb, togup, togdown);
 
 togup.addEventListener("click", function() {
 	console.log("Going up!");
-	area--;
+	if (switchable) {
+		area--;
+	}
 	if (area < 0) {
 		area = 0;
 	}
@@ -70,7 +87,9 @@ togup.addEventListener("click", function() {
 });
 togdown.addEventListener("click", function() {
 	console.log("Going down!");
-	area++;
+	if (switchable) {
+		area++;
+	}
 	if (area > rooms.length - 1) {
 		area = rooms.length - 1;
 	}
