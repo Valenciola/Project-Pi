@@ -27,6 +27,7 @@ html {
 	width: 60%;
 	height: 70%;
 	z-index: 9;
+	display: none;
 }
 #popbutton {
 	float: right;

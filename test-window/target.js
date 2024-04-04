@@ -9,26 +9,20 @@ loca = (loca.substring(loca.indexOf("#"), loca.length));
 let pop = document.getElementById("popup");
 //pop.style.left = ((window.innerWidth) / 2) + "px";
 
+//Bare bones for a popup
 let btn = document.getElementById("popbutton");
 btn.addEventListener("click", function() {
 	console.log("Click!");
-	pop.innerHTML = ("");
+	popbutton.setAttribute("disabled", "true");
 	pop.style.display = "none";
 });
 
-//Bare bones for a popup
 window.addEventListener("keydown", function(e) {
 	if (e.key == 'a') {
 		console.log("A");
-		pop.innerHTML = ("<button id=\"popbutton\">X</button><p>Hello</p><p>Some extra text to fill area</p><p>Is there an expansion if I type more than I already have?</p>");
+		popbutton.removeAttribute("disabled");
 		pop.style.display = "initial";
 	}
-	let btn = document.getElementById("popbutton");
-	btn.addEventListener("click", function() {
-		console.log("Click!");
-		pop.innerHTML = ("");
-		pop.style.display = "none";
-	});
 });
 
 //Buttons to change rooms *
