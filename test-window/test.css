@@ -90,6 +90,21 @@ html {
 	opacity: 0.6;
 }
 
+/* Dialogue Box */
+
+#dio {
+	background-color: palevioletred;
+	width: 50%;
+	height: 120px;
+	z-index: 9;
+	position: absolute;
+	display: initial;
+	left: 20px;
+}
+.scrolldiv {
+	overflow-y: auto;
+}
+
 #test {
 	position: absolute;
 	left: 20px;

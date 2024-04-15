@@ -99,3 +99,15 @@ togdown.addEventListener("click", function() {
 	setTimeout(regulate, 1, area, rooms, togupb, togdownb, togup, togdown);
 	console.log(area);
 });
+
+// Dialogue box initial stuff
+let dio = document.getElementById("dio");
+window.addEventListener("keydown", function(e) {
+	if (e.key == 'd') {
+		console.log("Dia!");
+		dio.style.display = "initial";
+	}
+	else {
+		dio.style.display = "none";
+	}
+});
