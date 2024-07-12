@@ -32,23 +32,20 @@ const testRunText = function(text) {
 // function keeps alternating between all three lines for some reason; got to find a fix
 let lines = ["First line", "second line", "third line"];
 
-async function runDialogue(text) {
+function displayText(text, element) {
+    let i = 0;
+    const interval = 100; // milliseconds
+    element.textContent = '';
 
-    for (let lines of text) {
-        i = 0;
-        let runner = window.setInterval(testRunText, 100, lines);
-
-        await new Promise((resolve) => {
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'b') {
-                    resolve();
-                }
-            });
-        });
+    function addCharacter() {
+        if (i < text.length) {
+            element.textContent += text[i];
+            i++;
+            setTimeout(addCharacter, interval);
+        }
     }
-    // console.log("End");
+
+    addCharacter();
 }
 
-// Call the function to start waiting
-
-runDialogue(lines);
+displayText(lines[0], dio);
