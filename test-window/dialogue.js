@@ -34,8 +34,8 @@ let lines = ["First line", "second line", "third line"];
 
 function displayText(text, element) {
     let i = 0;
-    const interval = 100; // milliseconds
-    element.textContent = '';
+    const interval = 100; //Wait time
+    element.textContent = ''; //Erase original text
 
     function addCharacter() {
         if (i < text.length) {
@@ -48,4 +48,6 @@ function displayText(text, element) {
     addCharacter();
 }
 
-displayText(lines[0], dio);
+displayText(lines[2], dio);
+setTimeout(displayText, 3000, lines[1], dio);
+setTimeout(displayText, 6000, lines[0], dio);
