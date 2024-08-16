@@ -1,5 +1,7 @@
 // Dialogue box initial stuff
 let dio = document.getElementById("dio");
+let dia = document.getElementById("dia");
+
 window.addEventListener("keydown", function(e) {
 	if (e.key == 'd' || e.key == 'b') {
 		//console.log("Dia!");
@@ -48,6 +50,6 @@ function displayText(text, element) {
     addCharacter();
 }
 
-displayText(lines[2], dio);
-setTimeout(displayText, 3000, lines[1], dio);
-setTimeout(displayText, 6000, lines[0], dio);
+displayText(lines[2], dia);
+setTimeout(displayText, 3000, lines[1], dia);
+setTimeout(displayText, 6000, lines[0], dia);
