@@ -2,6 +2,8 @@
 let dio = document.getElementById("dio");
 let dia = document.getElementById("dia");
 let conti = document.getElementById("progression");
+let up = document.getElementById("linkupbtn");
+let down = document.getElementById("linkdownbtn");
 
 window.addEventListener("keydown", function(e) {
 	if (e.key == 'd' || e.key == 'b') {
@@ -33,12 +35,15 @@ const testRunText = function(text) {
 };
 
 // function keeps alternating between all three lines for some reason; got to find a fix
-let lines = ["First line", "second line", "third line"];
+let lines = ["Welcome to the dialogue test engine, which took forever to fix.", 
+            "The amount of questions I asked the AI is pretty sad, but I finally got my answers.", 
+            "I would feel better if there weren't any more issues ;-;",
+            "I hope this is worth it in the end because if I break something else I would be really sad about it"];
 
 function dialogue(lines, element, button) {
     let line = 0;
     let i = 0; // Initialize character index
-    const interval = 100; // Wait time
+    const interval = 35; // Wait time
     element.textContent = ''; // Erase original text
     button.setAttribute("disabled", "true");
 
@@ -59,6 +64,7 @@ function dialogue(lines, element, button) {
         }
         else {
             // What to do at the end of all dialogue lines?
+            console.log("I'm done...");
         }
     }
 
