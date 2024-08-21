@@ -122,9 +122,8 @@ html {
 	font-size: 12pt;
 }
 #progression:disabled {
-	background-color: rgb(252, 209, 213);
-	border-color: rgb(118, 70, 118);
 	cursor: not-allowed;
+	opacity: 0.75;
 }
 #profile {
 	position: absolute;
