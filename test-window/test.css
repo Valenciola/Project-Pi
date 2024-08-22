@@ -124,9 +124,9 @@ html {
 }
 #profile {
 	position: absolute;
-	top: 10%;
-	left: 1%;
-	width: 10%;
+	top: 4vh;
+	left: 1vw;
+	width: 7vw;
 }
 
 /* Unaffiliated */
