@@ -38,7 +38,8 @@ const testRunText = function(text) {
 let lines = ["Welcome to the dialogue test engine, which took forever to fix.", 
             "The amount of questions I asked the AI is pretty sad, but I finally got my answers.", 
             "I would feel better if there weren't any more issues ;-;",
-            "I hope this is worth it in the end because if I break something else I would be really sad about it"];
+            "I hope this is worth it in the end because if I break something else I would be really sad about it",
+            "Anyways this is pretty cool and now you can have entire conversations with an NPC but like they're all directed but anyway yaaaaaaaaay"];
 
 function dialogue(lines, element, button) {
     let line = 0;
