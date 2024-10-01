@@ -1,2 +1,2 @@
 # Project-Pi
-It's a secret!
+A webdev project. Stay tuned for more details later on.
