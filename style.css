@@ -12,7 +12,7 @@ body {
 }
 
 #info {
-    border: white 2px solid;
+    border: white 2px dashed;
     border-radius: 4px;
     padding: 7px;
     width: fit-content;
