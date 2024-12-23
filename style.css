@@ -11,6 +11,7 @@ body {
     margin-right: auto;
 }
 
+/* Content */
 #info {
     border: white 2px dashed;
     border-radius: 4px;
@@ -24,4 +25,8 @@ body {
 }
 #phase {
     color: #61e8ed;
+}
+
+a:active {
+    color: rgb(138, 101, 181);
 }
