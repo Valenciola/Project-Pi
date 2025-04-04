@@ -1,0 +1,9 @@
+Do
+- ?
+
+Maybe
+- Consider using different files to split up work in JS?
+- Test scale of image against actual in-browser experience
+
+Come Implementation Time
+- It's okay to use multiple files because global variables exist (in fact, make one file for everything that needs to be global, maybe toolbox.js or head.js)
