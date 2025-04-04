@@ -5,10 +5,19 @@ body {
     font-family: "Pixelify Sans", sans-serif;
 }
 
+/* Decoratives */
 #pi-loading {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#audiocontrol {
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: line-through;
+    font-size: 2.5vh;
+    opacity: 70%;
+    border: solid purple 2px;
 }
 
 /* Content */
